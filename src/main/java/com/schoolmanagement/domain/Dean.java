@@ -13,12 +13,11 @@ import javax.persistence.*;
 public class Dean {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
 
-
-        @Embedded
-        private EntitiyVariables entitiyVariables;
+    @Embedded
+    private EntityVariables entityVariables;
 }

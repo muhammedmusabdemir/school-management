@@ -3,6 +3,7 @@ package com.schoolmanagement.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 
 @Getter
@@ -20,9 +21,10 @@ public class Teacher {
     private boolean isAdvisor;
 
     @Column(unique = true)
+    @Email
     private String email;
 
 
     @Embedded
-    private EntitiyVariables entitiyVariables;
+    private EntityVariables entityVariables;
 }
